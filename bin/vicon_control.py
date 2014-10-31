@@ -71,7 +71,7 @@ def viconCallback(data):
     # set bits for which axes to control: 1 = pitch, 2 = roll, 4 = yaw, 8 = thrust
     my_ctrl.ctrl = 1
     # transcribe
-    my_ctrl.pitch = cmd_twist.linear.x * -2000.0
+    my_ctrl.pitch = cmd_twist.linear.y * 1000.0
     # add checksum
     my_ctrl.chksum = ctrl_chksum(my_ctrl)
     # send message
