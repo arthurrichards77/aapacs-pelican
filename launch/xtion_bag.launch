@@ -1,0 +1,7 @@
+<launch>
+
+  <include file="$(find openni_launch)/launch/openni.launch" />
+
+  <node name="rosbag" pkg="rosbag" type="record" output="screen" args="-o /home/asctec/rosbag_files/xtion /camera/depth/image /camera/rgb/image_raw" respawn="true" />
+
+</launch>

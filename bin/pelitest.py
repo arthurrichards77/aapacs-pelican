@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import roslib
-roslib.load_manifest('aapacs_pelican')
+roslib.load_manifest('aapacs-pelican')
 import rospy
 from asctec_msgs.msg import CtrlInput
 import numpy
