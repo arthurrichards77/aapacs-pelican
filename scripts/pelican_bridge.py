@@ -2,7 +2,7 @@
 import roslib
 roslib.load_manifest('aapacs_pelican')
 import rospy
-from asctec_msgs.msg import CtrlInput
+from aapacs_pelican.msg import CtrlInput
 from geometry_msgs.msg import Twist
 import numpy
 
@@ -10,7 +10,7 @@ import numpy
 rospy.init_node('pelican_bridge', anonymous=False)  # anonymous=True)
 
 # Node publisher to CTRL_INPUT
-pub_ctrl = rospy.Publisher('asctec/CTRL_INPUT', CtrlInput)
+pub_ctrl = rospy.Publisher('asctec/CTRL_INPUT', CtrlInput, queue_size=1)
 
 # Message structure to send
 my_ctrl = CtrlInput()
